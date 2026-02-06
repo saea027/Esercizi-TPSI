@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Eccezioni/Eccezioni.iml" filepath="$PROJECT_DIR$/Eccezioni/Eccezioni.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Esercizi-TPSI.iml" filepath="$PROJECT_DIR$/Esercizi-TPSI.iml" />
       <module fileurl="file://$PROJECT_DIR$/MultiThreading/MultiThreading.iml" filepath="$PROJECT_DIR$/MultiThreading/MultiThreading.iml" />
-      <module fileurl="file://$PROJECT_DIR$/untitled6.iml" filepath="$PROJECT_DIR$/untitled6.iml" />
     </modules>
   </component>
 </project>
