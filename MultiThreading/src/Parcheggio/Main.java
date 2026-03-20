@@ -20,8 +20,14 @@ public class Main {
         }
 
         for (Auto a : autos) a.start();
-        for (Auto a : autos) a.join();
+        //for (Auto a : autos) a.join();
 
         System.out.println("Programma finito");
+    }
+
+    public synchronized void close() throws InterruptedException{
+        int timeParker = (int) (6000 * Math.random());
+        System.out.println("Parcheggio chiuso per " + timeParker + "s.");
+        Thread.sleep(timeParker);
     }
 }
