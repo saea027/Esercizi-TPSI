@@ -5,7 +5,12 @@ import java.util.List;
 
 public class Main {
     public static void main(String[]args) throws InterruptedException{
-        Parking parking = new Parking(5, 5);
+        //TODO: (
+        // 1. Tempo massimo di simulazione. Il parcheggio chiude dopo N secondi.
+        // 2. Non tutti i veicolo sono uguali - alcunoi occupano più posti
+        // )
+
+        Parking parking = new Parking(5);
         List<Auto> autos = new ArrayList<>();
 
         final int maxAuto = 10;

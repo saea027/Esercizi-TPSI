@@ -4,9 +4,9 @@ public class Parking {
     private int slots;
     private final int maxSlot;
 
-    public Parking(int initialSlots, int maxSlot){
+    public Parking(int initialSlots){
         this.slots=initialSlots;
-        this.maxSlot=maxSlot;
+        this.maxSlot=initialSlots;
     }
 
     public synchronized void enter(Auto auto) throws InterruptedException{
