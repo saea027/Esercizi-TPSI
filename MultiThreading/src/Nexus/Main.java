@@ -12,7 +12,24 @@ package Nexus;
 // }
 
 public class Main {
-    public static void main(String[]args){
-        Aereoporto aereoporto = new Aereoporto(2,3);
+    public static void main(String[]args) throws InterruptedException {
+        int gateNaz=3, gateInternaz=2;
+        Aereoporto aereoporto = new Aereoporto(gateInternaz,gateNaz);
+
+        Volo[] volos = {
+                new Volo("nex-01", aereoporto, TipoVolo.internazionale),
+                new Volo("nex-02", aereoporto, TipoVolo.nazionale),
+                new Volo("nex-03", aereoporto, TipoVolo.nazionale),
+                new Volo("nex-04", aereoporto, TipoVolo.internazionale),
+                new Volo("nex-05", aereoporto, TipoVolo.nazionale),
+                new Volo("nex-06", aereoporto, TipoVolo.internazionale),
+                new Volo("nex-07", aereoporto, TipoVolo.nazionale),
+                new Volo("nex-08", aereoporto, TipoVolo.nazionale)
+        };
+
+        for (Volo v : volos) v.start();
+        for (Volo v : volos) v.join();
+
+        System.out.println("END");
     }
 }
