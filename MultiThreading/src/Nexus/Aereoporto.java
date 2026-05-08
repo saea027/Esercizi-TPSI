@@ -50,7 +50,7 @@ public class Aereoporto {
 
     public void rilasciaGateInternazionale(Volo volo) throws InterruptedException{
         look.lock();
-        gateNazionaliLiberi++;
+        gateInternazionaliLiberi++;
         //signal - notify
         waitNaz.signal();
 
@@ -60,9 +60,8 @@ public class Aereoporto {
     public void getGateInter(Volo volo) throws InterruptedException {
         look.lock();
         try {
-            while (gateNazionaliLiberi==0) waitNaz.await();
-            gateNazionaliLiberi--;
-            System.out.println("jjf");
+            while (gateInternazionaliLiberi==0) waitNaz.await();
+            gateInternazionaliLiberi--;
         } finally {
             look.unlock();
         }
